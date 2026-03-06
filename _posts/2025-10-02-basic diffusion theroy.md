@@ -3,7 +3,7 @@ layout: post
 title: Baisc diffusion theroy
 date: 2025-10-02 00:00:00
 description: 推导以下扩散模型
-tags: diffusion deep-learning
+tags: diffusion study-recording
 categories: notes
 ---
 
