@@ -54,13 +54,13 @@ cv:
         awarder: Sun Yat-sen University
         summary: Awarded to graduates with outstanding academic performance and comprehensive achievements.
 
-      - title: NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place
+      - title: NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place (Team Leader)
         date: 2024
         awarder: NTIRE
         url: "https://cvlai.net/ntire/2024/"
         summary: First place in the NTIRE 2024 Low-Light Image Enhancement Challenge.
 
-      - title: First-Class Academic Scholarship, School of Intelligent Systems Engineering (Team Leader)
+      - title: First-Class Academic Scholarship, School of Intelligent Systems Engineering 
         date: 2023
         awarder: Sun Yat-sen University
         summary: First-class academic scholarship awarded by the School of Intelligent Systems Engineering for excellent academic performance.
@@ -68,4 +68,5 @@ cv:
       - title: CVPR UG2+ 2022 Low-Light Human Action Recognition Challenge - 4th Place (Team Leader)
         date: 2022
         awarder: CVPR UG2+ Workshop
+        url: "https://cvpr2022.ug2challenge.org/"
         summary: Achieved 4th place in the CVPR UG2+ 2022 Challenge on human action recognition in low-light scenes; served as team leader.
