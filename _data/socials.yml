@@ -6,6 +6,6 @@ scholar_userid: 339f9gwAAAAJ # your Google Scholar ID
 wechat_qr: wechat-qr.png # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://github.com/wangchx67/wangchx67.github.io/blob/main/assets/img/GitHub.svg
+  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png
   title: GitHub
   url: https://github.com/wangchx67/
