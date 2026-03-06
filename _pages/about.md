@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ">Google Scholar</a></p>
     <p>wangchenxi_daily@163.com</p>
-    <p><a href="https://github.com/wangchx67">GitHub</a></p>
+    <p>Hangzhou, China</p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
