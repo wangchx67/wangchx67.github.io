@@ -15,8 +15,8 @@ categories: notes
 
 #### forward（加噪）
 
-对于一个真实数据域 $\mathbf{x}_0 \sim q(\mathbf{x})$，加噪 $T$ 步得到noise sample sequences  
-$\mathbf{x}_1, \dots, \mathbf{x}_T$，通过 $beta$ 控制步数，其中$\{\beta_t \in (0, 1)\}_{t=1}^T$：
+对于一个真实数据域 $\mathbf{x}_0 \sim q(\mathbf{x})$ ，加噪 $T$ 步得到 noise sample sequences  
+$\mathbf{x}_1, \dots, \mathbf{x}_T$ ，通过 $beta$ 控制步数，其中 $\{\beta_t \in (0, 1)\}_{t=1}^T$ ：
 
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
@@ -38,7 +38,7 @@ $$
 
 #### backward（降噪）
 
-去噪就是在求 $q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)$，然而 $q(\mathbf{x}_{t-1} \mid \mathbf{x}_t) = \frac{q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) \cdot q(\mathbf{x}_{t-1})}{q(\mathbf{x}_t)}$，其中$q(\mathbf{x}_{t} )$ 是需要依赖 $q(x_{0})$ 的，我们当前无法获得真实的数据域分布，基于 $x_{0},x_{t}$ 之间的直接联系，并借助贝叶斯公式可以求得：
+去噪就是在求 $q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)$ ，然而 $ q(\mathbf{x}_{t-1} \mid \mathbf{x}_t) = \frac{q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) \cdot q(\mathbf{x}_{t-1})}{q(\mathbf{x}_t)}$ ，其中$q(\mathbf{x}_{t} )$ 是需要依赖 $q(x_{0})$ 的，我们当前无法获得真实的数据域分布，基于 $ x_{0},x_{t} $ 之间的直接联系，并借助贝叶斯公式可以求得：
 
 $$
 q(\mathbf{x}_{t-1} \vert \mathbf{x}_t, \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_{t-1}; {\tilde{\boldsymbol{\mu}}}(\mathbf{x}_t, \mathbf{x}_0), {\tilde{\beta}_t} \mathbf{I})
