@@ -1,40 +1,24 @@
 cv:
   name: Chenxi Wang
-  label: Algorithm Engineer
-  email: callmewangchenxi@gmail.com
+  email: wangchenxi_daily@163.com
   location: Hangzhou, Zhejiang, China
   image: ""
   summary: Algorithm Engineer at vivo specializing in computational photography, low-light image enhancement, and motion scene optimization.
 
-  social_networks:
-    - network: X
-      username: ""
-    - network: GitHub
-      username: wangchx67
-    - network: LinkedIn
-      username: ""
-
   address:
-    street: ""
     city: Hangzhou
     region: Zhejiang
-    postalCode: ""
+    postalCode: 310000
     countryCode: CN
 
   sections:
     Education:
       - institution: Sun Yat-sen University
         location: Shenzhen, China
-        url: ""
         area: Mechanical Engineering - Intelligent Manufacturing
         studyType: Master of Engineering
         start_date: 2021
         end_date: 2024
-        score: ""
-        courses: ""
-        highlights:
-          - Specialized in intelligent manufacturing and interdisciplinary research.
-          - Conducted research in computational photography and low-light image enhancement.
 
       - institution: China Jiliang University
         location: Hangzhou, China
@@ -42,104 +26,46 @@ cv:
         studyType: Bachelor of Engineering
         start_date: 2017
         end_date: 2021
-        highlights:
-          - Strong foundation in computer vision and image processing.
-          - Focused on deep learning and AI applications.
 
     Experience:
       - company: vivo
-        position: Algorithm Engineer
-        location: China
-        start_date: 2024
-        end_date: ""
+        position: Imaging Algorithm Engineer
+        location: Hangzhou, China
+        start_date: 2024.7
+        end_date: now
         summary: Responsible for image quality optimization of vivo smartphone camera features, specializing in motion scene image quality optimization.
-        highlights:
-          - Image quality optimization for smartphone cameras.
-          - Motion scene image enhancement and tuning.
 
-      - company: ""
-        position: ""
-        location: ""
-        start_date: ""
-        end_date: ""
-        highlights:
-          - ""
-
-
-    Volunteer:
-      - company: ""
-        position: ""
-        location: ""
-        start_date: ""
-        end_date: ""
-        summary: ""
-        highlights:
-          - ""
+      - company: OPPO
+        position: Imaging Algorithm Intern
+        location: Shenzhen, China
+        start_date: 2023.7
+        end_date: 2023.9
+        summary: Responsible for organizing training datasets and optimizing models and training strategies for joint denoising and demosaicing algorithms.
 
     Awards:
-      - title: NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place
-        authors:
-          - "NTIRE 2024"
-        date: 2024
-        awarder: NTIRE
-        url: ""
-        summary: First place in the NTIRE 2024 Low-Light Image Enhancement Challenge.
 
       - title: National Scholarship
-        authors:
-          - "Sun Yat-sen University"
         date: 2023
         awarder: Ministry of Education
         summary: National Scholarship awarded for outstanding academic performance.
 
-    Skills:
-      - name: Computational Photography
-        level: Advanced
-        icon: fa-solid fa-hashtag
-        keywords: "Low-light Image Enhancement, Image Dehazing, Motion Scene Optimization, Image Restoration"
+      - title: Outstanding Graduate of Sun Yat-sen University
+        date: 2024
+        awarder: Sun Yat-sen University
+        summary: Awarded to graduates with outstanding academic performance and comprehensive achievements.
 
-    Languages:
-      - name: Chinese
-        summary: "Native speaker"
+      - title: NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place
+        date: 2024
+        awarder: NTIRE
+        url: "https://cvlai.net/ntire/2024/"
+        summary: First place in the NTIRE 2024 Low-Light Image Enhancement Challenge.
 
-      - name: English
-        summary: "Fluent"
+      - title: First-Class Academic Scholarship, School of Intelligent Systems Engineering (Team Leader)
+        date: 2023
+        awarder: Sun Yat-sen University
+        summary: First-class academic scholarship awarded by the School of Intelligent Systems Engineering for excellent academic performance.
 
-    Interests:
-      - name: AIGC
-        icon: fa-solid fa-tag
-        keywords: "AI-generated content, Deep learning applications, Image and Video Processing"
-
-    Certificates:
-      - name: ""
-        date: ""
-        issuer: ""
-        icon: fa-solid fa-location-dot
-
-      - name: ""
-        date: ""
-        issuer: ""
-        icon: fa-solid fa-tag
-
-      - name: ""
-        date: ""
-        issuer: ""
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Low-Light Image Enhancement Research
-        summary: Research on customized low-light image enhancement methods using decoupled networks and frequency information.
-        highlights:
-          - NTIRE 2024 1st Place Solution
-          - Fourier-based enhancement methods
-        start_date: 2022
-        end_date: 2024
-
-    References:
-      - name: ""
-        icon: fa-solid fa-laptop
-        reference: ""
-
-      - name: ""
-        icon: fa-solid fa-thumbtack
-        reference: ""
+      - title: CVPR UG2+ 2022 Low-Light Human Action Recognition Challenge - 4th Place (Team Leader)
+        date: 2022
+        awarder: CVPR UG2+ Workshop
+        summary: Achieved 4th place in the CVPR UG2+ 2022 Challenge on human action recognition in low-light scenes; served as team leader.
