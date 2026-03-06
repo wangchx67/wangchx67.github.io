@@ -53,9 +53,9 @@ cv:
         awarder: Sun Yat-sen University
         summary: Awarded to graduates with outstanding academic performance and comprehensive achievements.
 
-      - title: NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place (Team Leader)
+      - title: CVPR NTIRE 2024 Low-Light Image Enhancement Challenge - 1st Place (Team Leader)
         date: 2024
-        awarder: NTIRE
+        awarder: CVPR NTIRE Workshop
         url: "https://cvlai.net/ntire/2024/"
         summary: First place in the NTIRE 2024 Low-Light Image Enhancement Challenge.
 
