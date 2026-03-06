@@ -11,6 +11,8 @@ profile:
   more_info: >
     <p>wangchenxi_daily@163.com</p>
     <p>Hangzhou, China</p>
+    <a href='https://scholar.google.com/citations?user=339f9gwAAAAJ'>Google scholar</a>
+    <a href='https://github.com/wangchx67'>GitHub</a>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
