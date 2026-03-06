@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>wangchenxi_daily@163.com</p>
+    <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ">Google Scholar</a></p>
+    <p><a href="https://github.com/wangchx67">GitHub</a></p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
