@@ -65,23 +65,6 @@ cv:
         highlights:
           - ""
 
-      - company: ""
-        position: ""
-        location: ""
-        start_date: ""
-        end_date: ""
-
-      - company: ""
-        position: ""
-        location: ""
-        start_date: ""
-        end_date: ""
-
-      - company: ""
-        position: ""
-        location: ""
-        start_date: ""
-        end_date: ""
 
     Volunteer:
       - company: ""
@@ -108,31 +91,6 @@ cv:
         date: 2023
         awarder: Ministry of Education
         summary: National Scholarship awarded for outstanding academic performance.
-
-    Publications:
-      - title: Colorization-Inspired Customized Low-Light Image Enhancement by a Decoupled Network
-        authors:
-          - Chenxi Wang
-        publisher: IEEE Transactions on Neural Networks and Learning Systems
-        releaseDate: 2024
-        url: ""
-        summary: A colorization-inspired decoupled network for customized low-light image enhancement.
-
-      - title: CSPN: A Category-Specific Processing Network for Low-Light Image Enhancement
-        authors:
-          - Chenxi Wang
-        publisher: IEEE Transactions on Circuits and Systems for Video Technology
-        releaseDate: 2024
-        url: ""
-        summary: A category-specific processing network for adaptive low-light image enhancement.
-
-      - title: Mb-TaylorFormer: Multi-branch Efficient Transformer Expanded by Taylor Formula for Image Dehazing
-        authors:
-          - Chenxi Wang
-        publisher: ICCV
-        releaseDate: 2023
-        url: ""
-        summary: Multi-branch efficient transformer for image dehazing using Taylor formula expansion.
 
     Skills:
       - name: Computational Photography
