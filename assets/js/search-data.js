@@ -30,58 +30,63 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-my-basic-diffusion",
+        },{id: "post-different-diffusion-prediction-and-loss",
         
-          title: "My Basic Diffusion",
+          title: "different diffusion prediction and loss",
         
-        description: "主要介绍我的diffusion模型学习记录",
+        description: "学习噪声/图像/速度预测以及对应的优化方式（读JiT想要汇总记录下）",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/my-basic-diffusion/";
+            window.location.href = "/blog/2025/different-diffusion-prediction-and-loss/";
           
         },
-      },{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
+      },{id: "post-architecture-design-of-diffusion-model",
+        
+          title: "Architecture design of diffusion model",
+        
+        description: "学习下目前扩散模型中的架构设计",
+        section: "Posts",
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          
+            window.location.href = "/blog/2025/architecture-design-of-diffusion-model/";
+          
+        },
+      },{id: "post-conditional-diffusion",
+        
+          title: "conditional diffusion",
+        
+        description: "扩散模型中的条件生成",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/conditional-diffusion/";
+          
+        },
+      },{id: "post-baisc-diffusion-theroy",
+        
+          title: "Baisc diffusion theroy",
+        
+        description: "推导以下扩散模型",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/basic-diffusion-theroy/";
+          
         },
       },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("mailto:%77%61%6E%67%63%68%65%6E%78%69_%64%61%69%6C%79@%31%36%33.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://scholar.google.com/citations?user=339f9gwAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
