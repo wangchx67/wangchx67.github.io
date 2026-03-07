@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-flux2-0-技术报告分析以及代码阅读",
+        },{id: "post-flux2-0-technique-report-and-code",
         
-          title: "flux2.0 技术报告分析以及代码阅读",
+          title: "flux2.0 technique report and code",
         
         description: "学习下flux2.0",
         section: "Posts",
