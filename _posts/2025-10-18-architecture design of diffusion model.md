@@ -15,7 +15,6 @@ categories: notes
 
 #### ROPE, 旋转位置编码
 
-[LLM学习记录（五）--超简单的RoPE理解方式 - 知乎](https://zhuanlan.zhihu.com/p/642289220)
 
 对于每 2 个相邻的维度 $(x_{2i},x_{2i+1})$，定义旋转矩阵：
 
