@@ -2,19 +2,19 @@
 layout: post
 title: Baisc diffusion theroy
 date: 2025-10-02 00:00:00
-description: 推导以下扩散模型
+description: 推导一下扩散模型
 tags: diffusion study-recording
 categories: notes
 ---
 
-推导以下扩散模型
+推导一下扩散模型
 
 ### Basic theory
 
 #### forward（加噪）
 
-对于一个真实数据域 $\mathbf{x}_0 \sim q(\mathbf{x})$ ，加噪 $T$ 步得到 noise sample sequences  
-$\mathbf{x}_1, \dots, \mathbf{x}_T$ ，通过 $beta$ 控制步数，其中 $\{\beta_t \in (0, 1)\}_{t=1}^T$ ：
+对于一个真实数据域 $\mathbf{x}_{0} \sim q(\mathbf{x})$ ，加噪 $T$ 步得到 noise sample sequences  
+$\mathbf{x}_{1}, \dots, \mathbf{x}_{T}$ ，通过 $beta$ 控制步数，其中 $\{\beta_{t} \in (0, 1)\}_{t=1}^T$ ：
 
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
