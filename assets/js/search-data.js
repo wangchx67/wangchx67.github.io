@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-different-diffusion-prediction-and-loss",
+        },{id: "post-flux2-0-技术报告分析以及代码阅读",
+        
+          title: "flux2.0 技术报告分析以及代码阅读",
+        
+        description: "学习下flux2.0",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/flux2.0/";
+          
+        },
+      },{id: "post-different-diffusion-prediction-and-loss",
         
           title: "different diffusion prediction and loss",
         
@@ -50,17 +61,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/architecture-design-of-diffusion-model/";
-          
-        },
-      },{id: "post-conditional-diffusion",
-        
-          title: "conditional diffusion",
-        
-        description: "扩散模型中的条件生成",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/conditional-diffusion/";
           
         },
       },{id: "post-baisc-diffusion-theroy",
