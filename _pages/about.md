@@ -9,8 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>wangchenxi_daily@163.com</p>
     <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ">Google Scholar</a></p>
+    <p>wangchenxi_daily@163.com</p>
     <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ">Google Scholar</a></p>
     
 
