@@ -38,7 +38,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/different-diffusion-prediction-and-loss/";
+            window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
           
         },
       },{id: "post-architecture-design-of-diffusion-model",
