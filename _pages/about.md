@@ -28,6 +28,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My name is Chenxi Wang. I was born in Quzhou, Zhejiang, and I am currently based in Hangzhou, Zhejiang. I am an Algorithm Engineer at the Imaging Algorithm Research Department of vivo. My research interests include image quality enhancement, Artificial Intelligence Generated Content (AIGC), and Computer Vision.Previously, I received my master's degree from Sun Yat-sen University and my master's degree from China Jiliang University.
+My name is Chenxi Wang. I was born in Quzhou, Zhejiang, and I am currently based in Hangzhou, Zhejiang. I am an Algorithm Engineer at the Imaging Algorithm Research Department of vivo. My research interests include image quality enhancement, Artificial Intelligence Generated Content (AIGC), and Computer Vision.Previously, I received my master's degree from Sun Yat-sen University and my bachelor's degree from China Jiliang University.
 
 This website mainly presents my personal resume. I also share blog posts and occasionally document aspects of my life here. Feel free to contact me if you have any questions.
