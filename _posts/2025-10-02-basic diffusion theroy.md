@@ -119,7 +119,7 @@ L_{t}^\text{simple}
 \end{aligned}
 $$
 
-与DDPM论文一致。
+与DDPM论文一致。实际训练过程为，sample一个噪声$\epsilon \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$ ，对于某特随机选择的timestep $t$ ，计算 $x_{t}$ ，并将其与时间条件一起作为网络的输入预测噪声，计算预测结果与sample出来噪声的MSE来优化网络。
 
 ### DDIM
 
