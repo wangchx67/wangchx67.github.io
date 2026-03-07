@@ -13,7 +13,7 @@ categories: notes
 
 #### forward（加噪）
 
-对于一个真实数据域 $\mathbf{x}_{0} \sim q(\mathbf{x})$ ，加噪 $T$ 步得到 noise sample sequences  
+对于一个真实数据域 $$\mathbf{x}_{0} \sim q(\mathbf{x})$$ ，加噪 $T$ 步得到 noise sample sequences  
 $\mathbf{x}_{1}, \dots, \mathbf{x}_{T}$ ，通过 $beta$ 控制步数，其中 $\{\beta_{t} \in (0, 1)\}_{t=1}^T$ ：
 
 $$

@@ -10,8 +10,8 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>wangchenxi_daily@163.com</p>
-    <p><a href="https://github.com/wangchx67" style="color: blue; font-weight: bold; text-decoration: underline;">GitHub</a></p>
     <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ" style="color: blue; font-weight: bold; text-decoration: underline;">Google Scholar</a></p>
+    <p><a href="https://github.com/wangchx67" style="color: blue; font-weight: bold; text-decoration: underline;">GitHub</a></p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
