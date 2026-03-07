@@ -67,7 +67,7 @@ ninja.data = [{
         
           title: "Baisc diffusion theroy",
         
-        description: "推导以下扩散模型",
+        description: "推导一下扩散模型",
         section: "Posts",
         handler: () => {
           
