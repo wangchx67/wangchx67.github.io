@@ -7,7 +7,7 @@ subtitle:
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p>wangchenxi_daily@163.com</p>
     <p><a href="https://scholar.google.com/citations?user=339f9gwAAAAJ" style="color: blue; font-weight: bold; text-decoration: underline;">Google Scholar</a></p>
