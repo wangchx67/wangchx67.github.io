@@ -162,6 +162,7 @@ $$
 #### Classifier-Free Guidance
 
 不基于分类器的生成需要从头训练，基于原本的优化目标建立基于条件$y$的联合分布，即$q(x_{t-1} \vert x_{t})$ 变成$q(x_{t-1} \vert x_{t},y)$，相当于除了时间条件t加了一个其他条件$y$，由于新增了一个条件，可以通过计算condition与uncondtion的结果做差，使得生成更往条件的方向去靠，仍旧基于score-function推导：
+
 $$
 \begin{aligned}
 \nabla_{\mathbf{x}_t} \log p(y \vert \mathbf{x}_t)

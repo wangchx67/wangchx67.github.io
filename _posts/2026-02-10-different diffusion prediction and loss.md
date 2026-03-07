@@ -1,9 +1,9 @@
 ---
 layout: post
-title: different diffusion prediction and loss
+title: Different diffusion prediction and loss
 date: 2026-02-10 00:00:00
 description: 学习噪声/图像/速度预测以及对应的优化方式（读JiT想要汇总记录下）
-tags: diffusion deep-learning
+tags: diffusion study-recording
 categories: notes
 ---
 
@@ -17,3 +17,9 @@ categories: notes
 #### $\epsilon$  （预测噪声）
 
 #### $v$ （预测速度）
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/wechat-qr.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
