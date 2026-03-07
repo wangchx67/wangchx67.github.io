@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Architecture design of diffusion model
-date: 2025-10-02 00:00:00
+date: 2025-10-18 00:00:00
 description: 学习下目前扩散模型中的架构设计
 tags: study-recording
 categories: notes

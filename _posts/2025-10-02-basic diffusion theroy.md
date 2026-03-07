@@ -86,9 +86,9 @@ L_\text{VLB}
 \end{aligned}
 $$
 
-主要优化目标为$L_{t-1}$（对于t+1步则为$L_{t}$）
+T和0都是常数，所以主要优化目标为$L_{t-1}$（对于t+1步则为$L_{t}$）
 
-生成器在扩散模型中的形式是去噪，以$x_{T}$为输入，预测$x_{t-1}$，相当于 $p_\theta(x_{t-1} \vert x_{t}) = \mathcal{N}(x_{t-1}; \mu_\theta(x_{t}, t), \Sigma_\theta(x_{t}, t))$，其中${\mu}$为作为预测的网络，根据前面的推导：
+生成器在扩散模型中的形式是去噪，以$x_{t}$为输入，预测$x_{t-1}$，相当于 $p_\theta(x_{t-1} \vert x_{t}) = \mathcal{N}(x_{t-1}; \mu_\theta(x_{t}, t), \Sigma_\theta(x_{t}, t))$，其中$\theta$是网络参数，根据前面的推导：
 
 $$
 \begin{aligned}

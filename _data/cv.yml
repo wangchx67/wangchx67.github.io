@@ -42,11 +42,6 @@ cv:
         summary: Responsible for organizing training datasets and optimizing models and training strategies for joint denoising and demosaicing algorithms.
 
     Awards:
-      - title: National Scholarship
-        date: 2023
-        awarder: Ministry of Education
-        summary: National Scholarship awarded for outstanding academic performance.
-
       - title: Outstanding Graduate of Sun Yat-sen University
         date: 2024
         awarder: Sun Yat-sen University
@@ -57,6 +52,11 @@ cv:
         awarder: CVPR NTIRE Workshop
         url: "https://cvlai.net/ntire/2024/"
         summary: First place in the NTIRE 2024 Low-Light Image Enhancement Challenge.
+
+      - title: National Scholarship
+        date: 2023
+        awarder: Ministry of Education
+        summary: National Scholarship awarded for outstanding academic performance.
 
       - title: First-Class Academic Scholarship, School of Intelligent Systems Engineering 
         date: 2023
