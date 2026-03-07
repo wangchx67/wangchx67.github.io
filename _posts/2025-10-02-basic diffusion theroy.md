@@ -13,7 +13,7 @@ categories: notes
 
 #### forward（加噪）
 
-对于一个真实数据域 $\mathbf{x}_{0} \sim q(\mathbf{x})$ $\mathbf{x}_{0} \sim q(\mathbf{x})$ ，加噪 $T$ 步得到 noise sample sequences $ \mathbf{x}_{1}, \dots, \mathbf{x}_{T} $ ，通过 $ \beta $ 控制步数，其中 $ \{\beta_{t} \in (0, 1)\}_{t=1}^T$ ：
+对于一个真实数据域 $x_{0},x_{t}$ $x_{0} \sim q(x)$ ，加噪 $T$ 步得到 noise sample sequences $ x_{1}, \dots, x_{T} $ ，通过 $ \beta $ 控制步数，其中 $ \{\beta_{t} \in (0, 1)\}_{t=1}^T$ ：
 
 $$
 q(\mathbf{x}_{t} \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_{t}; \sqrt{1 - \beta_{t}} \mathbf{x}_{t-1}, \beta_{t}\mathbf{I}) \quad
@@ -35,7 +35,7 @@ $$
 
 #### backward（降噪）
 
-去噪就是在求 $q(\mathbf{x}_{t-1} \vert \mathbf{x}_{t})$ ，然而 $ q(\mathbf{x}_{t-1} \mid \mathbf{x}_{t}) = \frac{q(\mathbf{x}_{t} \mid \mathbf{x}_{t-1}) \cdot q(\mathbf{x}_{t-1})}{q(\mathbf{x}_{t})}$ ，其中$q(\mathbf{x}_{t} )$ 是需要依赖 $q(x_{0})$ 的，我们当前无法获得真实的数据域分布，基于 $ x_{0},x_{t} $ 之间的直接联系，并借助贝叶斯公式可以求得：
+去噪就是在求 $q(x_{t-1} \vert x_{t})$ ，然而 $ q(x_{t-1} \mid x_{t}) = \frac{q(x_{t} \mid x_{t-1}) \cdot q(x_{t-1})}{q(x_{t})}$ ，其中$q(x_{t} )$ 是需要依赖 $q(x_{0})$ 的，我们当前无法获得真实的数据域分布，基于 $ x_{0},x_{t} $ 之间的直接联系，并借助贝叶斯公式可以求得：
 
 $$
 q(\mathbf{x}_{t-1} \vert \mathbf{x}_{t}, \mathbf{x}_{0}) = \mathcal{N}(\mathbf{x}_{t-1}; {\tilde{\boldsymbol{\mu}}}(\mathbf{x}_{t}, \mathbf{x}_{0}), {\tilde{\beta}_{t}} \mathbf{I})
@@ -88,7 +88,7 @@ $$
 
 主要优化目标为$L_{t-1}$（对于t+1步则为$L_{t}$）
 
-生成器在扩散模型中的形式是去噪，以$x_{T}$为输入，预测$x_{t-1}$，相当于 $p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_{t}) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_{t}, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_{t}, t))$，其中${\mu}_\theta$为作为预测的网络，根据前面的推导：
+生成器在扩散模型中的形式是去噪，以$x_{T}$为输入，预测$x_{t-1}$，相当于 $p_\theta(x_{t-1} \vert x_{t}) = \mathcal{N}(x_{t-1}; \mu_\theta(x_{t}, t), \Sigma_\theta(x_{t}, t))$，其中${\mu}$为作为预测的网络，根据前面的推导：
 
 $$
 \begin{aligned}
