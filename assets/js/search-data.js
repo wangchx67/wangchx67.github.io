@@ -43,7 +43,7 @@ ninja.data = [{
         },
       },{id: "post-different-diffusion-prediction-and-loss",
         
-          title: "different diffusion prediction and loss",
+          title: "Different diffusion prediction and loss",
         
         description: "学习噪声/图像/速度预测以及对应的优化方式（读JiT想要汇总记录下）",
         section: "Posts",
@@ -52,11 +52,22 @@ ninja.data = [{
             window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
           
         },
+      },{id: "post-flash-attention",
+        
+          title: "Flash attention",
+        
+        description: "学习Flash attention",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/flash-attention/";
+          
+        },
       },{id: "post-architecture-design-of-diffusion-model",
         
           title: "Architecture design of diffusion model",
         
-        description: "学习下目前扩散模型中的架构设计",
+        description: "目前主流扩散模型中的架构设计",
         section: "Posts",
         handler: () => {
           
