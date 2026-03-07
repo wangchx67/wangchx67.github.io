@@ -7,7 +7,7 @@ tags: diffusion study-recording
 categories: notes
 ---
 
-推导一下扩散模型
+推导一下扩散模型，主要还是基于[Lil' log What are Diffusion Models?](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)这篇博客进行学习并自行推导。
 
 ### Basic theory
 
@@ -35,7 +35,7 @@ $$
 
 #### backward（降噪）
 
-去噪就是在求 $q(x_{t-1} \vert x_{t})$ ，然而 $ q(x_{t-1} \mid x_{t}) = \frac{q(x_{t} \mid x_{t-1}) \cdot q(x_{t-1})}{q(x_{t})}$ ，其中$q(x_{t} )$ 是需要依赖 $q(x_{0})$ 的，我们当前无法获得真实的数据域分布，基于 $ x_{0},x_{t} $ 之间的直接联系，并借助贝叶斯公式可以求得：
+去噪就是在求 $q(x_{t-1} \vert x_{t})$ ，然而 $ q(x_{t-1} \mid x_{t}) = \frac{q(x_{t} \mid x_{t-1}) \cdot q(x_{t-1})}{q(x_{t})}$ ，其中$q(x_{t} )$ 是需要依赖 $q(x_{0})$ 的，基于 $ x_{0},x_{t} $ 之间的直接联系，并借助贝叶斯公式可以求得：
 
 $$
 q(\mathbf{x}_{t-1} \vert \mathbf{x}_{t}, \mathbf{x}_{0}) = \mathcal{N}(\mathbf{x}_{t-1}; {\tilde{\boldsymbol{\mu}}}(\mathbf{x}_{t}, \mathbf{x}_{0}), {\tilde{\beta}_{t}} \mathbf{I})
@@ -122,3 +122,54 @@ $$
 与DDPM论文一致。
 
 ### DDIM
+
+DDIM本质上在DDPM的基础上在反向生成过程中去掉了随机性，首先引入参数 $\sigma_t$ 对生成过程重参数化：
+
+$$
+\begin{aligned}
+\mathbf{x}_{t-1} 
+&= \sqrt{\bar{\alpha}_{t-1}}\mathbf{x}_0 +  \sqrt{1 - \bar{\alpha}_{t-1}}\boldsymbol{\epsilon}_{t-1} & \\
+&= \sqrt{\bar{\alpha}_{t-1}}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_{t-1} - \sigma_t^2} \boldsymbol{\epsilon}_t + \sigma_t\boldsymbol{\epsilon} & \\
+&= \sqrt{\bar{\alpha}_{t-1}} \Big( \frac{\mathbf{x}_t - \sqrt{1 - \bar{\alpha}_t} \epsilon^{(t)}_\theta(\mathbf{x}_t)}{\sqrt{\bar{\alpha}_t}} \Big) + \sqrt{1 - \bar{\alpha}_{t-1} - \sigma_t^2} \epsilon^{(t)}_\theta(\mathbf{x}_t) + \sigma_t\boldsymbol{\epsilon} \\
+q_\sigma(\mathbf{x}_{t-1} \vert \mathbf{x}_t, \mathbf{x}_0)
+&= \mathcal{N}(\mathbf{x}_{t-1}; \sqrt{\bar{\alpha}_{t-1}} \Big( \frac{\mathbf{x}_t - \sqrt{1 - \bar{\alpha}_t} \epsilon^{(t)}_\theta(\mathbf{x}_t)}{\sqrt{\bar{\alpha}_t}} \Big) + \sqrt{1 - \bar{\alpha}_{t-1} - \sigma_t^2} \epsilon^{(t)}_\theta(\mathbf{x}_t), \sigma_t^2 \mathbf{I})
+\end{aligned}
+$$
+
+可以发现网络参数固定后，仍然有随机性在，这就导致无法跨多步，因此只要去掉这个随机性，将$\sigma_t$置零，就可以在采样的时候跨多步预测噪声（deterministic generation），这个性质也非常好地帮助对预训练diffusion进行蒸馏。
+
+
+### 条件生成
+
+#### Classifier Guided Genration
+
+基于预训练的生成模型，在生成每一步用一个分类器的梯度去引导往某个特定条件去生成，结合score-function进行推导，无条件DDPM的score-function为：
+$$
+\nabla_{\mathbf{x}_t} \log q(\mathbf{x}_t)
+= - \frac{\boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t)}{\sqrt{1 - \bar{\alpha}_t}}
+$$
+这个梯度在score-matching的时候跟diffusion做backward生成去掉的噪声是一直的，在此基础上加入条件$y$以及分类器$f_\phi(.)$:
+$$
+\begin{aligned}
+\nabla_{\mathbf{x}_t} \log q(\mathbf{x}_t, y)
+&= \nabla_{\mathbf{x}_t} \log q(\mathbf{x}_t) + \nabla_{\mathbf{x}_t} \log q(y \vert \mathbf{x}_t) \\
+&\approx - \frac{1}{\sqrt{1 - \bar{\alpha}_t}} \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t) + \nabla_{\mathbf{x}_t} \log f_\phi(y \vert \mathbf{x}_t) \\
+&= - \frac{1}{\sqrt{1 - \bar{\alpha}_t}} (\boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t) - \sqrt{1 - \bar{\alpha}_t} \nabla_{\mathbf{x}_t} \log f_\phi(y \vert \mathbf{x}_t))
+\end{aligned}
+$$
+新的梯度信息（噪声）$\nabla_{x_{t}}\log q(\mathbf{x}_t, y)$代替原本的$\nabla_{x_{t}}\log q(\mathbf{x}_t)$参与生成，随着timestep慢慢引导生成目标图像。
+
+#### Classifier-Free Guidance
+
+不基于分类器的生成需要从头训练，基于原本的优化目标建立基于条件$y$的联合分布，即$q(x_{t-1} \vert x_{t})$ 变成$q(x_{t-1} \vert x_{t},y)$，相当于除了时间条件t加了一个其他条件$y$，由于新增了一个条件，可以通过计算condition与uncondtion的结果做差，使得生成更往条件的方向去靠，仍旧基于score-function推导：
+$$
+\begin{aligned}
+\nabla_{\mathbf{x}_t} \log p(y \vert \mathbf{x}_t)
+&= \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \vert y) - \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t) \\
+&= - \frac{1}{\sqrt{1 - \bar{\alpha}_t}}\Big( \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t, y) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t) \Big) \\
+\bar{\boldsymbol{\epsilon}}_\theta(\mathbf{x}_t, t, y)
+&= \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t, y) - \sqrt{1 - \bar{\alpha}_t} \; w \nabla_{\mathbf{x}_t} \log p(y \vert \mathbf{x}_t) \\
+&= \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t, y) + w \big(\boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t, y) - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t) \big) \\
+&= (w+1) \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t, y) - w \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t)
+\end{aligned}
+$$
