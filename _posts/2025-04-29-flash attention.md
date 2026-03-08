@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 深入理解Flash Attention - 原理、实现与对比
+title: flash attention
 date: 2025-04-29 00:00:00
 description: 深入学习Flash Attention算法，包含官方源码分析与手撕简单实现
 tags: study-recording paper transformer optimization
