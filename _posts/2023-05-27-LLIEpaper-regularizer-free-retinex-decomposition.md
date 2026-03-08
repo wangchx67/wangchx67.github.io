@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regularizer-Free Retinex Decomposition (RFR)
+title: LLIEpaper-Regularizer-Free Retinex Decomposition (RFR)
 date: 2023-05-27 00:00:00
 description: CVPR2023低光照增强论文：不使用额外先验和正则项的Retinex分解方法
 tags: paper-reading
