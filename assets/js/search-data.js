@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-flux-series-technique-report-and-source-code",
+        },{id: "post-different-diffusion-prediction-and-loss",
+        
+          title: "Different diffusion prediction and loss",
+        
+        description: "学习噪声/图像/速度预测以及对应的优化方式",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
+          
+        },
+      },{id: "post-flux-series-technique-report-and-source-code",
         
           title: "flux series - technique report and source code",
         
@@ -38,36 +49,14 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/flux-series-technique-report-and-source-code/";
+            window.location.href = "/blog/2025/flux-series-technique-report-and-source-code/";
           
         },
-      },{id: "post-qwen-image-technique-report-and-code",
+      },{id: "post-深入理解flash-attention-原理-实现与对比",
         
-          title: "qwen-image technique report and code",
+          title: "深入理解Flash Attention - 原理、实现与对比",
         
-        description: "学习下qwen-image",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/qwen-image/";
-          
-        },
-      },{id: "post-different-diffusion-prediction-and-loss",
-        
-          title: "Different diffusion prediction and loss",
-        
-        description: "学习噪声/图像/速度预测以及对应的优化方式（读JiT想要汇总记录下）",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
-          
-        },
-      },{id: "post-flash-attention",
-        
-          title: "Flash attention",
-        
-        description: "学习Flash attention",
+        description: "深入学习Flash Attention算法，包含官方源码分析与手撕简单实现",
         section: "Posts",
         handler: () => {
           
@@ -94,6 +83,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/basic-diffusion-theroy/";
+          
+        },
+      },{id: "post-噪声模型在isp中的应用",
+        
+          title: "噪声模型在ISP中的应用",
+        
+        description: "深入理解图像信号处理器中的噪声建模与去噪技术",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/noise-model-in-ISP/";
           
         },
       },{id: "post-lliepaper-low-light-image-enhancement-via-structure-modeling-and-guidance",
@@ -127,6 +127,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2023/dynamic-region-aware-convolution/";
+          
+        },
+      },{id: "post-flow-based-generative-model",
+        
+          title: "flow-based generative model",
+        
+        description: "流模型生成模型",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/flow-based-generative-model/";
           
         },
       },{
