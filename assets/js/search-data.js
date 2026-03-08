@@ -96,26 +96,26 @@ ninja.data = [{
             window.location.href = "/blog/2025/basic-diffusion-theroy/";
           
         },
-      },{id: "post-low-light-image-enhancement-via-structure-modeling-and-guidance",
+      },{id: "post-lliepaper-low-light-image-enhancement-via-structure-modeling-and-guidance",
         
-          title: "Low-Light Image Enhancement via Structure Modeling and Guidance",
+          title: "LLIEpaper-Low-Light Image Enhancement via Structure Modeling and Guidance",
         
         description: "CVPR2023低光照增强论文：基于结构建模和引导的图像增强方法",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2023/structure-modeling-and-guidance/";
+            window.location.href = "/blog/2023/LLIEpaper-structure-modeling-and-guidance/";
           
         },
-      },{id: "post-regularizer-free-retinex-decomposition-rfr",
+      },{id: "post-lliepaper-regularizer-free-retinex-decomposition-rfr",
         
-          title: "Regularizer-Free Retinex Decomposition (RFR)",
+          title: "LLIEpaper-Regularizer-Free Retinex Decomposition (RFR)",
         
         description: "CVPR2023低光照增强论文：不使用额外先验和正则项的Retinex分解方法",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2023/regularizer-free-retinex-decomposition/";
+            window.location.href = "/blog/2023/LLIEpaper-regularizer-free-retinex-decomposition/";
           
         },
       },{id: "post-dynamic-region-aware-convolution-drconv",
