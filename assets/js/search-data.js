@@ -52,9 +52,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/flux-series-technique-report-and-source-code/";
           
         },
-      },{id: "post-深入理解flash-attention-原理-实现与对比",
+      },{id: "post-flash-attention",
         
-          title: "深入理解Flash Attention - 原理、实现与对比",
+          title: "flash attention",
         
         description: "深入学习Flash Attention算法，包含官方源码分析与手撕简单实现",
         section: "Posts",
@@ -85,11 +85,11 @@ ninja.data = [{
             window.location.href = "/blog/2025/basic-diffusion-theroy/";
           
         },
-      },{id: "post-噪声模型在isp中的应用",
+      },{id: "post-noise-model-in-isp",
         
-          title: "噪声模型在ISP中的应用",
+          title: "noise model in ISP",
         
-        description: "深入理解图像信号处理器中的噪声建模与去噪技术",
+        description: "相机raw的噪声来源和建模",
         section: "Posts",
         handler: () => {
           
@@ -129,15 +129,15 @@ ninja.data = [{
             window.location.href = "/blog/2023/dynamic-region-aware-convolution/";
           
         },
-      },{id: "post-flow-based-generative-model",
+      },{id: "post-流模型生成模型-flow-based-generative-model",
         
-          title: "flow-based generative model",
+          title: "流模型生成模型 (Flow-based Generative Model)",
         
-        description: "流模型生成模型",
+        description: "深入理解基于流的生成模型及其在底层视觉任务中的应用",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2023/flow-based-generative-model/";
+            window.location.href = "/blog/2022/flow-based-generative-model/";
           
         },
       },{
