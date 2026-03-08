@@ -202,4 +202,5 @@ $$
 L_{v}
 =\bar{\alpha}_tL_{x_0} + （1-\bar{\alpha}_t） L_\epsilon
 $$
+
 权衡了上述两种的优势，timestep较小时随 $L_\epsilon$ , 较大时随 $L_{x_0}$ 。
