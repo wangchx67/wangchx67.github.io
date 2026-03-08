@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dynamic Region-Aware Convolution (DRConv)
-date: 2026-03-08 00:00:00
+date: 2023-03-29 00:00:00
 description: 旷世CVPR2021论文Dynamic Region-Aware Convolution介绍及其在底层视觉中的应用
 tags: convolution computer-vision paper-reading
 categories: notes
@@ -12,9 +12,36 @@ categories: notes
 该文章提出了一种新的卷积方式，Dynamic Region-Aware Convolution（DRConv），首先回忆几种常用的卷积形式：
 
 1. **Standard Convolution** - 标准卷积
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\1.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 2. **Dilation Convolution** (空洞卷积)
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\2.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 3. **Deformable Convolution** （可变形卷积）
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\3.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 4. **Depth-wised Convolution** （深度可分离卷积）
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\4.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ## Limitations of Existing Convolutions
 
