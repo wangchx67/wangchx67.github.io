@@ -258,7 +258,7 @@ jekyll-archives:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
-display_tags: ["study-recording", "diffusion", "technique-report", "paper", "transformer"] # 
+display_tags: ["study-recording", "diffusion", "technique-report", "paper-reading", "transformer"] # 
 display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

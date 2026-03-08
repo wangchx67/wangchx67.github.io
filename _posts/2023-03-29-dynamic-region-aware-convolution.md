@@ -15,7 +15,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\1.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_drconv/1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -23,7 +23,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\2.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_drconv/2.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -31,7 +31,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\3.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_drconv/3.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -39,7 +39,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\4.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_drconv/4.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
