@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Regularizer-Free Retinex Decomposition (RFR)
-date: 2026-05-27 00:00:00
+date: 2023-05-27 00:00:00
 description: CVPR2023低光照增强论文：不使用额外先验和正则项的Retinex分解方法
 tags: paper-reading
 categories: notes
@@ -14,6 +14,12 @@ categories: notes
 ## Brief intro of Retinex theory
 
 我们首先简单回顾Retinex原理：
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ### Retinex成像原理
 
@@ -43,6 +49,13 @@ $$
 
 ### RetinexNet
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
 RetinexNet的框架如图所示。这里用到的正则项为：
 - 第一项用到了不同光照条件下反射光应该一样的原理
 - 第二项是一个TV正则，使得分解出的分量具有结构特性
@@ -50,6 +63,13 @@ RetinexNet的框架如图所示。这里用到的正则项为：
 总体来说比较简单，这也导致Retinex的performance不是很好，但是这是首次提出这么结合Retinex理论的深度学习架构，非常具有启发性，特别常用的LOL数据集也来自该文章。
 
 ### KinD
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/3.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 
 KinD 对Retinex分解做了进一步改进，其实就是在分解上多了些约束，然后在分解后专门有个去噪网络和定制化的入射分量增强网络。具体约束如下：
 
@@ -59,6 +79,13 @@ KinD 对Retinex分解做了进一步改进，其实就是在分解上多了些�
 
 （论文report的指标在入射分量增强部分直接使用GT/Input作为系数，其实不太合理。。。但是可视化结果确实很平滑）
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/4.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
 ## Limitations of using regularization
 
 论文中提到，这些正则项对场景很敏感，很难找到适应多种场景的正则项，并且过多的约束会影响performance（因为这些正则项其实都不是指标指向的，比如过于使用一些平滑正则就会导致PSNR很低）。
@@ -67,9 +94,23 @@ KinD 对Retinex分解做了进一步改进，其实就是在分解上多了些�
 
 该论文提出了Regularizer-Free Retinex decomposition and synthesis network (RFR)，利用对比学习和知识蒸馏的方法对Retinex分解做约束。
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/5.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
 ### 框架概述
 
 首先，该论文指出，传统的入射分量与反射分量相乘会放大噪声，采用合成的方式会缓解这个情况。
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/6.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 
 所以该论文在分解之后不做相乘，而是concat一起输入到一个合成网络。不过这块如果这么合成是不是和Retinex原理相悖了，不相乘而是靠concat一起让网络去学就相当于分解出来的东西的物理意义没有了。
 
@@ -77,9 +118,11 @@ KinD 对Retinex分解做了进一步改进，其实就是在分解上多了些�
 
 所以优化问题就转化成了如下所示：
 
-$$
-\min \mathcal{L}_{rec} + \mathcal{L}_{decomp}
-$$
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/7.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 这几个网络分别是预测入射分量、反射分量以及合成入射分量和反射分量的网络。
 
@@ -91,13 +134,20 @@ $$
 
 所以该论文使用对比学习的方式去优化这个函数。
 
-将低光照对应的GT当成正向样本，不对应的就当成负向样本。
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/8.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
-除此之外，作者发现低光照数据集（比如LOL）对重复场景会拍多组图片的情况，在选取正负样本的时候采用计算SSIM的方式，提出了一个改良版的对比学习损失函数 Weighted Normalized Temperature-Scaled CrossEntropy Loss (WNT-Xent Loss)：
 
-$$
-\mathcal{L}_{WNT-Xent} = -\log \frac{\exp(sim(z_i, z_j)/\tau)}{\sum_{k=1}^{2N} \exp(sim(z_i, z_k)/\tau)}
-$$
+将低光照对应的GT当成正向样本，不对应的就当成负向样本。除此之外，作者发现低光照数据集（比如LOL）对重复场景会拍多组图片的情况，在选取正负样本的时候采用计算SSIM的方式，提出了一个改良版的对比学习损失函数 Weighted Normalized Temperature-Scaled CrossEntropy Loss (WNT-Xent Loss)：
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/9.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 其中 $\omega$ 为在batch size为B的一个batch中的样本与对应图片的SSIM。
 
@@ -105,17 +155,27 @@ $$
 
 ### Retinex Decomposition with Self-knowledge Distillation
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/18.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 知识蒸馏目标函数：
 
-$$
-\mathcal{L}_{KD} = \alpha \cdot KL(F_T || F_S) + (1-\alpha) \cdot \mathcal{L}_{CE}
-$$
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/10.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 学生网络和教师网络输入差太多会导致学生网络学不到东西，所以为了拉近学生网络和教师网络的域差距，使用了mix augment：
 
-$$
-T_{cur} = T_{cur} + (T_{total} - T_{cur}) \cdot \lambda
-$$
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/11.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 另外这部分的mix augment还可以用在对比学习那部分做数据增强，同时作者提到这么做可以让网络适应不同的曝光度的输入。
 
@@ -125,17 +185,56 @@ $$
 
 Note：事实上，VE-LOL的100张测试集就是LOL-V2（LOL扩展版）的测试集，这一百张图片包含在了LOL的训练集上，所以理论上这种在LOL上训练在VE-LOL上测试，去证明网络具有泛化性很不合理。
 
+
 ### 实验结果
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/12.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 以上是实验结果，主要就是cross-dataset evaluation上的结果不太能接受。另外这个指标确实很高，不知道有没有跟LLFlow一样在最后再乘上一个跟GT相比的系数。
 
-### 可视化结果
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/13.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/14.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/15.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 以上是可视化结果以及user study。
 
-### 消融实验
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/13.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/13.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 这部分有一块不理解是如果 $\omega$ 不同这个利用数据集先验的WX损失函数，而用原始的会有多大的差别（即 $\omega_{WX} \times P_{L2}$）。
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zhihu_tupian_paper_retinex/13.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 另外，论文做了对以前Retinex网络分解后不相乘而是用合成网络去预测的结果，实验结果上证明了这么做的有效性，但是应该引入了一定的参数量，作者没有给出详细的解释，而且SSIM的提升也太高了。
 

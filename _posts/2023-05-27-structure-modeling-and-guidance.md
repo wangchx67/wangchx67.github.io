@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Low-Light Image Enhancement via Structure Modeling and Guidance
-date: 2026-03-08 00:00:00
+date: 2023-05-27 00:00:00
 description: CVPR2023低光照增强论文：基于结构建模和引导的图像增强方法
-tags: low-light-enhancement structure-prior computer-vision paper-reading
+tags: paper-reading
 categories: notes
 ---
 
