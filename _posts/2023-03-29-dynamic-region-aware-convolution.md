@@ -3,7 +3,7 @@ layout: post
 title: Dynamic Region-Aware Convolution (DRConv)
 date: 2023-03-29 00:00:00
 description: 旷世CVPR2021论文Dynamic Region-Aware Convolution介绍及其在底层视觉中的应用
-tags: convolution computer-vision paper-reading
+tags: paper-reading
 categories: notes
 ---
 
@@ -15,7 +15,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\1.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -23,7 +23,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\2.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -31,7 +31,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\3.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\3.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -39,7 +39,7 @@ categories: notes
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\4.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\zhihu_tupian_drconv\4.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
