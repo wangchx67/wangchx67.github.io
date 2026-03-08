@@ -41,15 +41,15 @@ ninja.data = [{
             window.location.href = "/blog/2026/structure-modeling-and-guidance/";
           
         },
-      },{id: "post-flux2-0-technique-report-and-code",
+      },{id: "post-flux-series-technique-report-and-source-code",
         
-          title: "flux2.0 technique report and code",
+          title: "flux series - technique report and source code",
         
-        description: "学习下flux2.0",
+        description: "学习下flux",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/flux2.0/";
+            window.location.href = "/blog/2026/flux-series-technique-report-and-source-code/";
           
         },
       },{id: "post-qwen-image-technique-report-and-code",
