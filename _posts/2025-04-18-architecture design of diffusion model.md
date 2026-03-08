@@ -1,17 +1,13 @@
 ---
 layout: post
 title: Architecture design of diffusion model
-date: 2025-10-18 00:00:00
+date: 2025-04-18 00:00:00
 description: 目前主流扩散模型中的架构设计
 tags: diffusion study-recording transformer
 categories: notes
 ---
 
-学习下目前扩散模型中的架构设计
-
-### diffusion中常用设计与结构
-
-#### DiT, Diffusion Transformer
+学习下目前主流扩散模型中的架构设计
 
 #### ROPE, 旋转位置编码
 
@@ -149,3 +145,4 @@ $$
 $$
 
 
+#### DiT, Diffusion Transformer

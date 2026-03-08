@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Baisc diffusion theroy
-date: 2025-10-02 00:00:00
+date: 2025-02-02 00:00:00
 description: 推导一下扩散模型
 tags: diffusion study-recording
 categories: notes

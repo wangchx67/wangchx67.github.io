@@ -2,7 +2,7 @@
 layout: post
 title: Different diffusion prediction and loss
 date: 2026-02-10 00:00:00
-description: 学习噪声/图像/速度预测以及对应的优化方式（读JiT想要汇总记录下）
+description: 学习噪声/图像/速度预测以及对应的优化方式
 tags: diffusion study-recording
 categories: notes
 ---

@@ -1,17 +1,11 @@
 ---
 layout: post
-title: flux series - technique report and source code
-date: 2026-03-05 00:00:00
-description: 学习下flux
+title: qwen-image technique report and code
+date: 2026-08-05 00:00:00
+description: 学习下qwen-image
 tags: diffusion technique-report
 categories: notes
 ---
-
-### flux1.0
-
-### flux-kontext
-
-### flux 2.0 
 
 技术报告：https://bfl.ai/research/representation-comparison
 
