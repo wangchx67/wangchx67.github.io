@@ -30,15 +30,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-dynamic-region-aware-convolution-drconv",
+        },{id: "post-flux2-0-technique-report-and-code",
         
-          title: "Dynamic Region-Aware Convolution (DRConv)",
+          title: "flux2.0 technique report and code",
         
-        description: "旷世CVPR2021论文Dynamic Region-Aware Convolution介绍及其在底层视觉中的应用",
+        description: "学习下flux2.0",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/dynamic-region-aware-convolution/";
+            window.location.href = "/blog/2026/flux2.0/";
           
         },
       },{id: "post-qwen-image-technique-report-and-code",
@@ -50,17 +50,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/qwen-image/";
-          
-        },
-      },{id: "post-flux2-0-technique-report-and-code",
-        
-          title: "flux2.0 technique report and code",
-        
-        description: "学习下flux2.0",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/flux2.0/";
           
         },
       },{id: "post-different-diffusion-prediction-and-loss",
@@ -105,6 +94,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/basic-diffusion-theroy/";
+          
+        },
+      },{id: "post-dynamic-region-aware-convolution-drconv",
+        
+          title: "Dynamic Region-Aware Convolution (DRConv)",
+        
+        description: "旷世CVPR2021论文Dynamic Region-Aware Convolution介绍及其在底层视觉中的应用",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/dynamic-region-aware-convolution/";
           
         },
       },{
