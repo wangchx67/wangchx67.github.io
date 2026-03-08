@@ -181,10 +181,12 @@ $$
 x_0 =\frac{x_t-\sqrt{1-\bar{\alpha}_t}\epsilon}{\sqrt{\bar{\alpha}_t}}
 $$ 
 
+{% raw %}
 $$
 L_{x_0}
 =\frac{{1-\bar{\alpha}_t}}{{\bar{\alpha}_t}}L_\epsilon
 $$
+{% endraw %}
 
 此时当timestep较小时，Loss趋于正无穷，很难学；当较大时是与 $\epsilon-predicton$ 类似；
 

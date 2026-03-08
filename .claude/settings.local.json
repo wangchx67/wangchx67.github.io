@@ -1,5 +1,9 @@
 {
   "permissions": {
+    "allow": [
+      "WebFetch(domain:zhuanlan.zhihu.com)",
+      "Bash(curl -s \"https://zhuanlan.zhihu.com/p/617933654\")"
+    ],
     "additionalDirectories": [
       "e:\\projects\\wangchx67.github.io\\_pages"
     ]
