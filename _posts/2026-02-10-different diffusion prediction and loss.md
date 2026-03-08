@@ -173,7 +173,7 @@ L_\epsilon
 \right]
 $$
 
-该方式下在高噪声下好学，低噪声下不好学(输出结果噪声的权重 $\sqrt{1-\bar{\alpha}_t}$ 会趋于0)。
+该方式下在高噪声下好学，低噪声下不好学(输出结果噪声的权重 {% raw %}$\sqrt{1-\bar{\alpha}_t}${% endraw %} 会趋于0)。
 
 对于 $x_0-prediction$ ， 因为 
 
