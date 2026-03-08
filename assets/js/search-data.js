@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-flux2-0-technique-report-and-code",
+        },{id: "post-low-light-image-enhancement-via-structure-modeling-and-guidance",
+        
+          title: "Low-Light Image Enhancement via Structure Modeling and Guidance",
+        
+        description: "CVPR2023低光照增强论文：基于结构建模和引导的图像增强方法",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/structure-modeling-and-guidance/";
+          
+        },
+      },{id: "post-flux2-0-technique-report-and-code",
         
           title: "flux2.0 technique report and code",
         
