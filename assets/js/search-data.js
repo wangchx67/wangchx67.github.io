@@ -67,11 +67,22 @@ ninja.data = [{
         
           title: "Architecture design of diffusion model",
         
-        description: "目前主流扩散模型中的架构设计",
+        description: "DiT DDT MMDiT...",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/architecture-design-of-diffusion-model/";
+            window.location.href = "/blog/2025/diffusion-transformer/";
+          
+        },
+      },{id: "post-architecture-design-of-diffusion-model",
+        
+          title: "Architecture design of diffusion model",
+        
+        description: "旋转位置编码",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ROPE/";
           
         },
       },{id: "post-baisc-diffusion-theroy",
