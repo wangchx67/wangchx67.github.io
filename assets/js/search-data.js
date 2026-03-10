@@ -41,26 +41,15 @@ ninja.data = [{
             window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
           
         },
-      },{id: "post-diffusion-transformer-架构演进",
+      },{id: "post-diffusion-transformer",
         
-          title: "Diffusion Transformer 架构演进",
+          title: "Diffusion Transformer",
         
-        description: "DiT、MMDiT、DDT",
+        description: "DiT、MMDiT、DDT 等",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/diffusion-transformer/";
-          
-        },
-      },{id: "post-flux-series-technique-report-and-source-code",
-        
-          title: "flux series - technique report and source code",
-        
-        description: "学习下flux",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/flux-series-technique-report-and-source-code/";
+            window.location.href = "/blog/2026/diffusion-transformer/";
           
         },
       },{id: "post-flash-attention",
