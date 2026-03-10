@@ -41,6 +41,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
           
         },
+      },{id: "post-diffusion-transformer-架构演进",
+        
+          title: "Diffusion Transformer 架构演进",
+        
+        description: "DiT、MMDiT、DDT",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/diffusion-transformer/";
+          
+        },
       },{id: "post-flux-series-technique-report-and-source-code",
         
           title: "flux series - technique report and source code",
@@ -61,17 +72,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/flash-attention/";
-          
-        },
-      },{id: "post-architecture-design-of-diffusion-model",
-        
-          title: "Architecture design of diffusion model",
-        
-        description: "DiT DDT MMDiT...",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/diffusion-transformer/";
           
         },
       },{id: "post-rope",
@@ -140,11 +140,11 @@ ninja.data = [{
             window.location.href = "/blog/2023/dynamic-region-aware-convolution/";
           
         },
-      },{id: "post-流模型生成模型-flow-based-generative-model",
+      },{id: "post-flow-based-generative-model",
         
-          title: "流模型生成模型 (Flow-based Generative Model)",
+          title: "Flow-based Generative Model",
         
-        description: "深入理解基于流的生成模型及其在底层视觉任务中的应用",
+        description: "流模型生成模型",
         section: "Posts",
         handler: () => {
           
