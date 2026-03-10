@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Diffusion Transformer 架构演进
-date: 2025-10-18 00:00:00
-description: DiT、MMDiT、DDT
+title: Diffusion Transformer
+date: 2026-01-18 00:00:00
+description: DiT、MMDiT、DDT 等
 tags: diffusion study-recording transformer
 categories: notes
 ---
