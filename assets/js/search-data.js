@@ -74,9 +74,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/diffusion-transformer/";
           
         },
-      },{id: "post-architecture-design-of-diffusion-model",
+      },{id: "post-rope",
         
-          title: "Architecture design of diffusion model",
+          title: "ROPE",
         
         description: "旋转位置编码",
         section: "Posts",
