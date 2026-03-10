@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 流模型生成模型 (Flow-based Generative Model)
+title: Flow-based Generative Model
 date: 2022-12-18 00:00:00
-description: 深入理解基于流的生成模型及其在底层视觉任务中的应用
+description: 流模型生成模型
 tags: deep-learning generative-model flow normalization computer-vision
 categories: paper-sharing
 ---
