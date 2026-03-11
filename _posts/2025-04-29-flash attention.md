@@ -2,7 +2,7 @@
 layout: post
 title: flash attention
 date: 2025-04-29 00:00:00
-description: 深入学习Flash Attention算法，包含官方源码分析与手撕简单实现
+description: 学习Flash Attention
 tags: study-recording paper transformer optimization
 categories: notes
 ---
@@ -11,9 +11,9 @@ categories: notes
 
 ## 1. 引言
 
-Transformer模型中的Self-Attention机制是计算瓶颈之一。标准Attention的计算复杂度和内存复杂度都是O(N²)，其中N是序列长度。当处理长序列时，Attention机制会占用大量显存。
+标准Attention的计算复杂度和内存复杂度都是O(N²)，其中N是序列长度。当处理长序列时，Attention机制会占用大量显存。
 
-Flash Attention由Tri Dao等人提出，通过IO-Aware的算法设计，利用GPU显存层次结构，显著减少了HBM（High Bandwidth Memory）的访问次数，将显存复杂度从O(N²)降低到O(N)，同时保持数值精确性。
+Flash Attention通过IO-Aware的算法设计，利用GPU显存层次结构，显著减少了HBM（High Bandwidth Memory）的访问次数，将显存复杂度从O(N²)降低到O(N)，同时保持数值精确性。
 
 ## 2. 标准Attention回顾
 
