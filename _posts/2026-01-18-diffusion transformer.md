@@ -7,9 +7,14 @@ tags: diffusion study-recording transformer
 categories: notes
 ---
 
-本文介绍 Diffusion Transformer (DiT) 架构的演进历程，从最初的 DiT 到 SD3 使用的 MMDiT，再到解耦的 DDT。
 
 ## 1. DiT (Diffusion Transformer)
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiT/dit.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ### 1.1 背景
 
@@ -20,7 +25,7 @@ DiT 是首次将 Transformer 架构应用于扩散模型的工作（2023年）�
 DiT 将扩散过程视为在 latent 空间上的操作：
 
 1. **VAE Encoder**：将图像编码为 latent
-2. **DiT Block**：在 latent 上进行 Transformer 处理
+2. **DiT Block**：latent patchfy一维向量进行 Transformer 处理，处理完之后unpatchfy
 3. **VAE Decoder**：将 latent 解码回图像
 
 ### 1.3 模型结构
@@ -61,33 +66,28 @@ $$
 
 其中 $\gamma, \beta$ 由 t 和 c 预测得到。
 
-#### 1.4.3 AdaLN-Zero（最优）
-
-在 AdaLN 基础上引入可学习的缩放因子：
-
-$$
-\text{AdaLN-Zero}(x, \gamma, \beta, \alpha) = \gamma \cdot \frac{x - \mu}{\sigma} + \beta + \alpha \cdot x
-$$
-
-DiT 最终采用 **AdaLN-Zero**，并用 MLP 从 t 和 c 预测所有参数。
-
-
 ---
 
 ## 2. MMDiT (Multi-modal Diffusion Transformer)
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiT/mmdit.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 ### 2.1 背景
 
-MMDiT 是 Stable Diffusion 3 使用的架构
+MMDiT 是 **Stable Diffusion 3** 使用的架构，
 
 ### 2.2 核心思想
 
-MMDiT 提出了 **分离的 QKV 投影** 和 **空间注意力** 机制：
+MMDiT 设计了双流DiT(双流分别处理多模态信息)， 提出了 **分离的 QKV 投影** 机制，专门针对图像和文本使用不同的投影矩阵：
 
 1. **图像 token**：保持空间结构
 2. **文本 token**：通过交叉注意力与图像交互
 
-### 2.3 模型结构
+### 2.3 数据流
 
 ```
 输入:
@@ -96,7 +96,7 @@ MMDiT 提出了 **分离的 QKV 投影** 和 **空间注意力** 机制：
 
   ↓ Patchify (图像) + 位置编码
 
-  ↓ DiT Blocks (重复24次)
+  ↓ MMDiT Blocks (重复24次)
     - Self-Attention (图像 → 图像)
     - Cross-Attention (图像 ← 文本)
     - MLP
@@ -107,46 +107,95 @@ MMDiT 提出了 **分离的 QKV 投影** 和 **空间注意力** 机制：
 ```
 
 
----
 
 ## 3. DDT (Decoupled Diffusion Transformer)
 
-### 3.1 背景
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiT/mmdit.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
-DDT（Decoupled Diffusion Transformer）提出解耦空间信息的思想，认为图像 token 之间的空间关系应该与 token 内容本身分离处理。
+近年来 **Diffusion Transformer (DiT)** 在图像生成任务上表现很好，但仍然存在两个问题：
 
-### 3.2 核心思想
+- 训练收敛较慢
+- 推理步骤较多
 
-DDT 的核心观点：
+在传统 diffusion transformer 中，每一个 denoising step 通常同时完成两个任务：
 
-1. **Token 内容**：需要全局交互（理解语义）
-2. **空间位置**：只需要局部交互（保持结构）
+1. **提取语义信息（low-frequency semantic information）**
+2. **恢复图像细节（high-frequency details）**
 
-因此将 Transformer 分为两个路径：
-- **内容路径**：处理 token 的语义内容
-- **空间路径**：处理 token 的位置信息
+但这两个任务实际上是 **相互冲突的**：
 
-### 3.3 模型结构
+- 语义提取希望 **抑制高频噪声**
+- 细节恢复需要 **生成高频信息**
+
+因此让同一个 transformer 同时做这两件事会带来优化困难。
+
+核心思想：
+
+> 将语义提取和细节生成两个任务进行解耦。
+
+模型结构：
 
 ```
-输入: [B, N, D]  (N = H*W 个 tokens)
-
-  ↓ Split
-  /    \
-内容分支   空间分支
-[BN, D]   [BN, D]
-
-  ↓          ↓
-Content    Spatial
-Attention  Attention
-
-  ↓          ↓
-[BN, D]   [BN, D]
-
-  \    /
-  Combine
-[BN, D]
-
-  ↓ Output
-[BN, D]
+noisy latent
+     │
+     ▼
+Condition Encoder
+     │
+     ▼
+Velocity Decoder
+     │
+     ▼
+predicted velocity
 ```
+
+具体来说：
+
+| 模块 | 作用 |
+|-----|-----|
+| Encoder | 提取语义信息 |
+| Decoder | 生成细节 |
+
+---
+
+特点：
+
+1. 增加 encoder 的容量可以明显提高性能，因为语义建模是 diffusion 过程的核心。Decoder 只负责预测 velocity / noise 主要恢复高频细节，因此可以设计得更小。
+
+2.跨 timestep 共享 encoder 特征
+
+观察：
+
+在 diffusion 过程中，相邻时间步之间的输入变化很小：
+
+```
+x_t
+x_{t-1}
+```
+
+因此：
+
+```
+Encoder(x_t) ≈ Encoder(x_{t-1})
+```
+
+DDT 利用这一点，在多个 timestep 之间 **共享 encoder feature**。
+
+这样可以减少 encoder 的重复计算，从而加速推理。
+
+---
+
+代码：
+
+https://github.com/MCG-NJU/DDT/blob/main/src/models/denoiser/decoupled_improved_dit.py
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/DiT/mmdit.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+主要的变化就是在讲所有的dit blocks分成两部分，一部分是encoder一部分是decoder，同时做repa loss的时候对encoder语义建模的结果做。
