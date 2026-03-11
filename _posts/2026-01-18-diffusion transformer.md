@@ -191,7 +191,7 @@ https://github.com/MCG-NJU/DDT/blob/main/src/models/denoiser/decoupled_improved_
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/DiT/mmdit.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DiT/ddt_code.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
