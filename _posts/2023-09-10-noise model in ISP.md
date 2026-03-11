@@ -3,8 +3,8 @@ layout: post
 title: noise model in ISP
 date: 2023-09-10 00:00:00
 description: 相机raw的噪声来源和建模
-tags: ISP noise-model paper image-processing
-categories: paper-sharing
+tags: ISP noise-model paper-sharing image-processing
+categories: notes
 ---
 
 最近OPPO实习完对噪声模型有了新的理解，近期关于夜景raw降噪的paper比较多，整理一下
@@ -291,3 +291,11 @@ $$\text{SNR} = \frac{K}{\sigma} = \frac{K}{\sqrt{K}} = \sqrt{K}$$
 
 光子数越多，信噪比越高，噪声相对越小。这就是为什么大像素的相机在低光环境下表现更好的原因。
 
+
+## 附：原始ppt（实习回来在组里做的分享）
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/noise_model_isp/noisemodel.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
