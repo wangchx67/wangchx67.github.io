@@ -56,7 +56,7 @@ ninja.data = [{
         
           title: "flash attention",
         
-        description: "深入学习Flash Attention算法，包含官方源码分析与手撕简单实现",
+        description: "学习Flash Attention",
         section: "Posts",
         handler: () => {
           
