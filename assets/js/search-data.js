@@ -131,7 +131,7 @@ ninja.data = [{
         },
       },{id: "post-flow-based-generative-model",
         
-          title: "Flow-based Generative Model",
+          title: "flow-based generative model",
         
         description: "流模型生成模型",
         section: "Posts",
