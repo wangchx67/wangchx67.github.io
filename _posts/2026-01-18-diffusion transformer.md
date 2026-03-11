@@ -162,7 +162,7 @@ predicted velocity
 
 1. 增加 encoder 的容量可以明显提高性能，因为语义建模是 diffusion 过程的核心。Decoder 只负责预测 velocity / noise 主要恢复高频细节，因此可以设计得更小。
 
-2.跨 timestep 共享 encoder 特征
+2. 跨 timestep 共享 encoder 特征
 
 观察：
 
