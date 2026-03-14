@@ -30,11 +30,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-different-diffusion-prediction-and-loss",
+        },{id: "post-pixel-diffusion",
         
-          title: "Different diffusion prediction and loss",
+          title: "pixel diffusion",
         
-        description: "学习噪声/图像/速度预测以及对应的优化方式",
+        description: "学习汇总一下像素域diffusion",
         section: "Posts",
         handler: () => {
           
