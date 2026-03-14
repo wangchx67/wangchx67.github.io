@@ -12,7 +12,7 @@ categories: notes
 ## 1. 相机成像物理流程
 
 相机成像过程本质上是将光子转换为数字信号的过程。下面我们从物理原理出发，推导完整的成像公式。
-
+ 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/noise_model_isp/noise_pipe.png" class="img-fluid rounded z-depth-1" %}

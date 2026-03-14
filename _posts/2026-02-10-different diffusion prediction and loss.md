@@ -6,7 +6,7 @@ description: 学习噪声/图像/速度预测以及对应的优化方式
 tags: diffusion study-recording
 categories: notes
 ---
-
+ 
 ### DDPM范畴下的不同预测方式
 
 最早的DDPM即采用噪声预测的方式，加噪过程为

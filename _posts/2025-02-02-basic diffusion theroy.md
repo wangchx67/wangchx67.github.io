@@ -6,7 +6,7 @@ description: 推导一下扩散模型
 tags: diffusion study-recording
 categories: notes
 ---
-
+ 
 推导一下扩散模型，主要还是基于[Lil' log What are Diffusion Models?](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)这篇博客进行学习并自行推导。
 
 ### Basic theory

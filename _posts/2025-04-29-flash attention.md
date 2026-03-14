@@ -79,7 +79,7 @@ Flash Attention的官方实现托管在[Dao-AILab/flash-attention](https://githu
 # 原始代码: https://github.com/Dao-AILab/flash-attention
 
 import math
-
+ 
 def flash_attention_fwd(q, k, v):
     """
     Flash Attention前向传播简化实现

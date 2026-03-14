@@ -6,7 +6,7 @@ description: 旷世CVPR2021论文Dynamic Region-Aware Convolution介绍及其在
 tags: paper-reading
 categories: notes
 ---
-
+ 
 本文介绍旷世在CVPR2021上发表的论文Dynamic Region-Aware Convolution以及该论文在一些底层视觉上的应用。
 
 该文章提出了一种新的卷积方式，Dynamic Region-Aware Convolution（DRConv），首先回忆几种常用的卷积形式：
