@@ -38,6 +38,17 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
+            window.location.href = "/blog/2026/pixel-difuusion/";
+          
+        },
+      },{id: "post-different-diffusion-prediction-and-loss",
+        
+          title: "Different diffusion prediction and loss",
+        
+        description: "学习噪声/图像/速度预测以及对应的优化方式",
+        section: "Posts",
+        handler: () => {
+          
             window.location.href = "/blog/2026/different-diffusion-prediction-and-loss/";
           
         },
