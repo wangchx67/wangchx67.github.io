@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-01'
+  last_updated: '2026-05-08'
 papers:
   339f9gwAAAAJ:LkGwnXOMwfcC:
     citations: 97
@@ -14,7 +14,7 @@ papers:
     title: 'V-dixmatch: A semi-supervised learning method for human action recognition in night video sensing'
     year: '2023'
   339f9gwAAAAJ:WF5omc3nYNoC:
-    citations: 314
+    citations: 319
     title: 'Mb-taylorformer: Multi-branch efficient transformer expanded by taylor formula for image dehazing'
     year: '2023'
   339f9gwAAAAJ:YsMSGLbcyi4C:
@@ -22,7 +22,7 @@ papers:
     title: 'Brighten-and-Colorize: A Decoupled Network for Customized Low-Light Image Enhancement'
     year: '2023'
   339f9gwAAAAJ:eQOLeE2rZwMC:
-    citations: 273
+    citations: 279
     title: 'FourLLIE: Boosting Low-Light Image Enhancement by Fourier Frequency Information'
     year: '2023'
   339f9gwAAAAJ:hqOjcs7Dif8C:
