@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-05-08'
+  last_updated: '2026-05-11'
 papers:
   339f9gwAAAAJ:LkGwnXOMwfcC:
-    citations: 97
+    citations: 98
     title: 'NTIRE 2024 challenge on low light image enhancement: Methods and results'
     year: '2024'
   339f9gwAAAAJ:Se3iqnhoufwC:
@@ -22,7 +22,7 @@ papers:
     title: 'Brighten-and-Colorize: A Decoupled Network for Customized Low-Light Image Enhancement'
     year: '2023'
   339f9gwAAAAJ:eQOLeE2rZwMC:
-    citations: 279
+    citations: 280
     title: 'FourLLIE: Boosting Low-Light Image Enhancement by Fourier Frequency Information'
     year: '2023'
   339f9gwAAAAJ:hqOjcs7Dif8C:
