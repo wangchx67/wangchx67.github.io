@@ -1,35 +1,35 @@
 metadata:
-  last_updated: '2026-07-03'
+  last_updated: '2026-08-05'
 papers:
   339f9gwAAAAJ:LkGwnXOMwfcC:
-    citations: 107
+    citations: 117
     title: 'NTIRE 2024 challenge on low light image enhancement: Methods and results'
     year: '2024'
   339f9gwAAAAJ:Se3iqnhoufwC:
-    citations: 14
+    citations: 15
     title: Colorization-inspired customized low-light image enhancement by a decoupled network
     year: '2024'
   339f9gwAAAAJ:W7OEmFMy1HYC:
     citations: 14
-    title: 'V-dixmatch: A semi-supervised learning method for human action recognition in night video sensing'
+    title: 'V-DixMatch: A semi-supervised learning method for human action recognition in night video sensing'
     year: '2023'
   339f9gwAAAAJ:WF5omc3nYNoC:
-    citations: 342
+    citations: 367
     title: 'Mb-taylorformer: Multi-branch efficient transformer expanded by taylor formula for image dehazing'
     year: '2023'
   339f9gwAAAAJ:YsMSGLbcyi4C:
-    citations: 30
+    citations: 33
     title: 'Brighten-and-Colorize: A Decoupled Network for Customized Low-Light Image Enhancement'
     year: '2023'
   339f9gwAAAAJ:eQOLeE2rZwMC:
-    citations: 302
+    citations: 326
     title: 'FourLLIE: Boosting Low-Light Image Enhancement by Fourier Frequency Information'
     year: '2023'
   339f9gwAAAAJ:hqOjcs7Dif8C:
-    citations: 14
+    citations: 18
     title: Fourier-based decoupling network for joint low-light image enhancement and deblurring
     year: '2025'
   339f9gwAAAAJ:roLk4NBRz8UC:
-    citations: 32
+    citations: 33
     title: 'CSPN: A category-specific processing network for low-light image enhancement'
     year: '2024'
